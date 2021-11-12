@@ -3,7 +3,8 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"tuned mass damper_atlas_1", frames: [[1269,0,585,928],[0,0,1267,1210]]}
+		{name:"tuned mass damper_atlas_1", frames: [[0,0,1519,928]]},
+		{name:"tuned mass damper_atlas_2", frames: [[0,0,1267,1210]]}
 ];
 
 
@@ -27,7 +28,7 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_4 = function() {
+(lib.CachedBmp_1 = function() {
 	this.initialize(ss["tuned mass damper_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
@@ -35,8 +36,8 @@ lib.ssMetadata = [
 
 
 (lib.mertalframe = function() {
-	this.initialize(ss["tuned mass damper_atlas_1"]);
-	this.gotoAndStop(1);
+	this.initialize(ss["tuned mass damper_atlas_2"]);
+	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -1105,7 +1106,7 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(71.1,-90.5,402.79999999999995,482.5);
 
 
-(lib.building = function(mode,startPosition,loop,reversed) {
+(lib.building2 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -1121,24 +1122,48 @@ if (reversed == null) { reversed = false; }
 	this.frame.name = "frame";
 	this.frame.setTransform(-1,328.75,1,1,0,0,0,271.5,391.3);
 
-	this.timeline.addTween(cjs.Tween.get(this.frame).to({regX:271.6,regY:391.4,skewX:9.9999,x:-0.95,y:328.8},19,cjs.Ease.none).to({regX:271.5,regY:391.3,skewX:0,x:-1,y:328.75},20).to({regY:391.4,skewX:-9.9999,y:328.8},20).to({regY:391.3,skewX:0,y:328.75},20).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.frame).to({regX:271.4,skewX:1.5013,x:-1.05},19,cjs.Ease.none).to({regX:271.5,skewX:0,x:-1},20).to({skewX:-1.5004},20).to({skewX:0},20).wait(1));
 
 	// Layer_2
 	this.instance = new lib.Tween1("synched",0);
 	this.instance.setTransform(1.55,-184.15);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:82.3,y:-181.75},19,cjs.Ease.none).to({x:0.8,y:-184.15},20,cjs.Ease.none).to({x:-78.95,y:-183.6},20,cjs.Ease.none).to({x:0.8,y:-184.15},20).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:10.3,y:-181.75},19,cjs.Ease.none).to({x:0.8,y:-184.15},20,cjs.Ease.none).to({x:-12.95,y:-183.6},20,cjs.Ease.none).to({x:0.8,y:-184.15},20).wait(1));
 
 	// Layer_3
 	this.instance_1 = new lib.Symbol3("synched",0);
 	this.instance_1.setTransform(-0.4,-245.55);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({regX:0.1,regY:0.1,rotation:30,x:82.6,y:-244.15},19,cjs.Ease.none).to({regX:0,regY:0,rotation:0,x:1.25,y:-245.55},20,cjs.Ease.none).to({rotation:-30,x:-78.65,y:-246.6},20,cjs.Ease.none).to({rotation:0,x:1.25,y:-245.55},20,cjs.Ease.none).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({regX:0.1,regY:0.1,rotation:30,x:10.6,y:-244.15},19,cjs.Ease.none).to({regX:0,regY:0,rotation:0,x:1.25,y:-245.55},20,cjs.Ease.none).to({rotation:-30,x:-12.65,y:-246.6},20,cjs.Ease.none).to({rotation:0,x:1.25,y:-245.55},20,cjs.Ease.none).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-229.2,-249.1,455.9,580.6);
+p.nominalBounds = new cjs.Rectangle(-201.5,-249.1,403.1,580.6);
+
+
+(lib.building = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.frame = new lib.Symbol7("synched",0);
+	this.frame.name = "frame";
+	this.frame.setTransform(-1,328.75,1,1,0,0,0,271.5,391.3);
+
+	this.timeline.addTween(cjs.Tween.get(this.frame).to({skewX:4.0013},19,cjs.Ease.none).to({skewX:0},20).to({skewX:-4.0005},20).to({skewX:0},20).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-201.5,-153.1,403,484.6);
 
 
 // stage content:
@@ -1164,11 +1189,13 @@ if (reversed == null) { reversed = false; }
 			this.isSingleFrame = true;
 		}
 		this.building.stop()
+		this.building2.stop()
 		this.animCtrl_Btn.txt.text = "Play";
 		this.animCtrl_Btn.addEventListener("click", animCtrl_Btnfunction.bind(this));
 		
 		for (var i = 1; i <= 104; i++) {
 			this.building.frame["b" + i].stop();
+				this.building2.frame["b" + i].stop();
 		}
 		
 		//create function to start/stop animation and toggle button text
@@ -1176,16 +1203,20 @@ if (reversed == null) { reversed = false; }
 			if (this.animCtrl_Btn.txt.text == "Play") {
 				this.animCtrl_Btn.txt.text = "Pause";
 				this.building.play()
+				this.building2.play()
 				for (var i = 1; i <= 104; i++) {
 					this.building.frame["b" + i].play();
+					this.building2.frame["b" + i].play();
 				}
 		
 			} else {
 		
 				this.animCtrl_Btn.txt.text = "Play";
 				this.building.stop()
+				this.building2.stop()
 				for (var i = 1; i <= 104; i++) {
 					this.building.frame["b" + i].stop();
+					this.building2.frame["b" + i].stop();
 				}
 		
 			}
@@ -1196,27 +1227,31 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Layer_7
-	this.building = new lib.building();
+	this.building = new lib.building2();
 	this.building.name = "building";
-	this.building.setTransform(675.6,319.85,1,1,0,0,0,35.6,16.1);
+	this.building.setTransform(396.75,342.8,1,1,0,0,0,0,40.2);
+
+	this.building2 = new lib.building();
+	this.building2.name = "building2";
+	this.building2.setTransform(903,318.7,1,1,0,0,0,35.6,16.1);
 
 	this.animCtrl_Btn = new lib.StartBtn();
 	this.animCtrl_Btn.name = "animCtrl_Btn";
 	this.animCtrl_Btn.setTransform(639.95,668.85,1.6647,1.6647);
 	new cjs.ButtonHelper(this.animCtrl_Btn, 0, 1, 2, false, new lib.StartBtn(), 3);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.animCtrl_Btn},{t:this.building}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.animCtrl_Btn},{t:this.building2},{t:this.building}]}).wait(1));
 
 	// Layer_2
-	this.instance = new lib.CachedBmp_4();
-	this.instance.setTransform(493.4,168.2,0.5,0.5);
+	this.instance = new lib.CachedBmp_1();
+	this.instance.setTransform(250.6,168.15,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(1078.3,414.6,-236.5999999999999,275.19999999999993);
+p.nominalBounds = new cjs.Rectangle(835.1,413.5,233.9999999999999,276.29999999999995);
 // library properties:
 lib.properties = {
 	id: '9439CB40C94240B28E43D44C65EE1556',
@@ -1226,7 +1261,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/tuned mass damper_atlas_1.png?1636123516932", id:"tuned mass damper_atlas_1"}
+		{src:"images/tuned mass damper_atlas_1.png?1636447442485", id:"tuned mass damper_atlas_1"},
+		{src:"images/tuned mass damper_atlas_2.png?1636447442486", id:"tuned mass damper_atlas_2"}
 	],
 	preloads: []
 };
