@@ -3,8 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"tuned mass damper_atlas_1", frames: [[0,0,1267,1210]]},
-		{name:"tuned mass damper_atlas_2", frames: [[0,0,1519,928]]}
+		{name:"tuned mass damper_atlas_1", frames: [[0,1551,872,472],[874,1551,729,70],[0,0,1267,1210],[0,1212,1280,337]]}
 ];
 
 
@@ -28,16 +27,30 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_2 = function() {
-	this.initialize(ss["tuned mass damper_atlas_2"]);
+(lib.CachedBmp_225 = function() {
+	this.initialize(ss["tuned mass damper_atlas_1"]);
 	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_224 = function() {
+	this.initialize(ss["tuned mass damper_atlas_1"]);
+	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.mertalframe = function() {
 	this.initialize(ss["tuned mass damper_atlas_1"]);
-	this.gotoAndStop(0);
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.MicrosoftTeamsimage13 = function() {
+	this.initialize(ss["tuned mass damper_atlas_1"]);
+	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -108,31 +121,28 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// label
-	this.txt = new cjs.Text("start/stop", "8px 'Exo 2'", "#FFFFFF");
+	this.txt = new cjs.Text("start/stop", "10px 'Avenir Next'");
 	this.txt.name = "txt";
-	this.txt.textAlign = "center";
-	this.txt.lineHeight = 12;
-	this.txt.lineWidth = 131;
+	this.txt.textAlign = "right";
+	this.txt.lineHeight = 16;
+	this.txt.lineWidth = 130;
 	this.txt.parent = this;
-	this.txt.setTransform(0,-4.65);
+	this.txt.setTransform(65.55,-4.65);
 
-	this.timeline.addTween(cjs.Tween.get(this.txt).wait(4));
+	this.timeline.addTween(cjs.Tween.get(this.txt).wait(1).to({font:"bold 10px 'Avenir Next'"},0).wait(3));
 
 	// skins
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f().s("#666666").ss(0.1,2,1).p("AABAAIgBAA");
-	this.shape.setTransform(24.65,11.95);
+	this.shape.graphics.f("#003E74").s().p("AqmB4IAAjvIQSAAQCBAABfAjQBbAkABAwQgBAxhbAjQhfAkiBAAg");
+	this.shape.setTransform(2.05,2.275);
+	this.shape._off = true;
 
-	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.f("#003E74").s().p("AD3B4IgBAAIo9AAQgxAAgigkQgkgjAAgxQAAgwAkgkQAXgXAdgIQAPgEAQAAIKOAAQAxAAAkAjQAjAkAAAwQAAAxgjAjQgkAkgxAAg");
-	this.shape_1.setTransform(0,-0.025);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(4));
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(3).to({_off:false},0).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-67.5,-12,135.1,25);
+p.nominalBounds = new cjs.Rectangle(-65.9,-9.7,135.9,24);
 
 
 (lib.frame_floor = function(mode,startPosition,loop,reversed) {
@@ -1315,43 +1325,55 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Layer_7
-	this.building = new lib.building2();
-	this.building.name = "building";
-	this.building.setTransform(396.75,342.8,1,1,0,0,0,0,40.2);
+	this.instance = new lib.CachedBmp_224();
+	this.instance.setTransform(107.35,1.85,0.5,0.5);
 
-	this.building2 = new lib.building();
-	this.building2.name = "building2";
-	this.building2.setTransform(903,318.7,1,1,0,0,0,35.6,16.1);
+	this.instance_1 = new lib.MicrosoftTeamsimage13();
+	this.instance_1.setTransform(12,8,0.065,0.065);
 
 	this.animCtrl_Btn = new lib.StartBtn();
 	this.animCtrl_Btn.name = "animCtrl_Btn";
-	this.animCtrl_Btn.setTransform(639.95,668.85,1.6647,1.6647);
+	this.animCtrl_Btn.setTransform(453.7,374.25);
 	new cjs.ButtonHelper(this.animCtrl_Btn, 0, 1, 2, false, new lib.StartBtn(), 3);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.animCtrl_Btn},{t:this.building2},{t:this.building}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.animCtrl_Btn},{t:this.instance_1},{t:this.instance}]}).wait(1));
+
+	// Layer_3
+	this.building = new lib.building2();
+	this.building.name = "building";
+	this.building.setTransform(130.8,209.75,0.5,0.5,0,0,0,0.1,32.7);
+
+	this.building2 = new lib.building();
+	this.building2.name = "building2";
+	this.building2.setTransform(466.2,220.7,0.5,0.5,0,0,0,90.3,54.6);
+
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#999999").s().p("EAhyAGDQgDgDAAgFIAAg8QAAgEADgCQADgDAEgBQAEABADADQADACAAAEIAAA8QAAAFgDADQgDACgEAAQgEAAgDgCgALKGDQgDgDAAgFIAAg8QAAgEADgCQADgDAEgBQAEABADADQADACAAAEIAAA8QAAAFgDADQgDACgEAAQgEAAgDgCgArhGDQgDgDAAgFIAAg8QAAgEADgCQADgDAEgBQAEABADADQADACAAAEIAAA8QAAAFgDADQgDACgEAAQgEAAgDgCgEgh/AGDQgDgDAAgFIAAg8QAAgEADgCQADgDAEgBQAEABADADQADACAAAEIAAA8QAAAFgDADQgDACgEAAQgEAAgDgCgEAhyAELQgDgDAAgEIAAg9QAAgEADgDQADgCAEgBQAEABADACQADADAAAEIAAA9QAAAEgDADQgDACgEABQgEgBgDgCgALKELQgDgDAAgEIAAg9QAAgEADgDQADgCAEgBQAEABADACQADADAAAEIAAA9QAAAEgDADQgDACgEABQgEgBgDgCgArhELQgDgDAAgEIAAg9QAAgEADgDQADgCAEgBQAEABADACQADADAAAEIAAA9QAAAEgDADQgDACgEABQgEgBgDgCgEgh/AELQgDgDAAgEIAAg9QAAgEADgDQADgCAEgBQAEABADACQADADAAAEIAAA9QAAAEgDADQgDACgEABQgEgBgDgCgEAhyACSQgDgCAAgFIAAg7QAAgFADgCQADgDAEAAQAEAAADADQADACAAAFIAAA7QAAAFgDACQgDADgEABQgEgBgDgDgALKCSQgDgCAAgFIAAg7QAAgFADgCQADgDAEAAQAEAAADADQADACAAAFIAAA7QAAAFgDACQgDADgEABQgEgBgDgDgArhCSQgDgCAAgFIAAg7QAAgFADgCQADgDAEAAQAEAAADADQADACAAAFIAAA7QAAAFgDACQgDADgEABQgEgBgDgDgEgh/ACSQgDgCAAgFIAAg7QAAgFADgCQADgDAEAAQAEAAADADQADACAAAFIAAA7QAAAFgDACQgDADgEABQgEgBgDgDgEAhyAAbQgDgDAAgFIAAg7QAAgEADgCQADgDAEgBQAEABADADQADACAAAEIAAA7QAAAFgDADQgDACgEAAQgEAAgDgCgALKAbQgDgDAAgFIAAg7QAAgEADgCQADgDAEgBQAEABADADQADACAAAEIAAA7QAAAFgDADQgDACgEAAQgEAAgDgCgArhAbQgDgDAAgFIAAg7QAAgEADgCQADgDAEgBQAEABADADQADACAAAEIAAA7QAAAFgDADQgDACgEAAQgEAAgDgCgEgh/AAbQgDgDAAgFIAAg7QAAgEADgCQADgDAEgBQAEABADADQADACAAAEIAAA7QAAAFgDADQgDACgEAAQgEAAgDgCgEAhygBcQgDgDAAgEIAAg9QAAgEADgDQADgCAEgBQAEABADACQADADAAAEIAAA9QAAAEgDADQgDACgEABQgEgBgDgCgALKhcQgDgDAAgEIAAg9QAAgEADgDQADgCAEgBQAEABADACQADADAAAEIAAA9QAAAEgDADQgDACgEABQgEgBgDgCgArhhcQgDgDAAgEIAAg9QAAgEADgDQADgCAEgBQAEABADACQADADAAAEIAAA9QAAAEgDADQgDACgEABQgEgBgDgCgEgh/gBcQgDgDAAgEIAAg9QAAgEADgDQADgCAEgBQAEABADACQADADAAAEIAAA9QAAAEgDADQgDACgEABQgEgBgDgCgEAhygDVQgDgCAAgFIAAg7QAAgFADgDQADgCAEAAQAEAAADACQADADAAAFIAAA7QAAAFgDACQgDADgEABQgEgBgDgDgALKjVQgDgCAAgFIAAg7QAAgFADgDQADgCAEAAQAEAAADACQADADAAAFIAAA7QAAAFgDACQgDADgEABQgEgBgDgDgArhjVQgDgCAAgFIAAg7QAAgFADgDQADgCAEAAQAEAAADACQADADAAAFIAAA7QAAAFgDACQgDADgEABQgEgBgDgDgEgh/gDVQgDgCAAgFIAAg7QAAgFADgDQADgCAEAAQAEAAADACQADADAAAFIAAA7QAAAFgDACQgDADgEABQgEgBgDgDgEAhygFMQgDgDAAgFIAAgZQAAgEADgCQADgDAEgBQAEABADADQADACAAAEIAAAZQAAAFgDADQgDACgEAAQgEAAgDgCgALKlMQgDgDAAgFIAAgmQAAgEADgDQADgDAEAAQAEAAADADQADADAAAEIAAAmQAAAFgDADQgDACgEAAQgEAAgDgCgArhlMQgDgDAAgFIAAgmQAAgFADgDQADgCAEAAQAEAAADACQADADAAAFIAAAmQAAAFgDADQgDACgEAAQgEAAgDgCgEgh/gFMQgDgDAAgFIAAgZQAAgEADgCQADgDAEgBQAEABADADQADACAAAEIAAAZQAAAFgDADQgDACgEAAQgEAAgDgCg");
+	this.shape.setTransform(275.75,161.5);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.building2},{t:this.building}]}).wait(1));
 	this.building.addEventListener("tick", AdobeAn.handleFilterCache);
 
 	// Layer_2
-	this.instance = new lib.CachedBmp_2();
-	this.instance.setTransform(250.6,168.15,0.5,0.5);
+	this.instance_2 = new lib.CachedBmp_225();
+	this.instance_2.setTransform(57.85,122.55,0.5,0.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(835.1,372.6,233.9999999999999,317.19999999999993);
+p.nominalBounds = new cjs.Rectangle(287,201.9,234.89999999999998,184.1);
 // library properties:
 lib.properties = {
 	id: '9439CB40C94240B28E43D44C65EE1556',
-	width: 1280,
-	height: 720,
-	fps: 30,
+	width: 550,
+	height: 400,
+	fps: 60,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/tuned mass damper_atlas_1.png?1637681918259", id:"tuned mass damper_atlas_1"},
-		{src:"images/tuned mass damper_atlas_2.png?1637681918259", id:"tuned mass damper_atlas_2"}
+		{src:"images/tuned mass damper_atlas_1.png?1638948421989", id:"tuned mass damper_atlas_1"}
 	],
 	preloads: []
 };
